@@ -6,7 +6,7 @@ Izdelana za vajo HTML/CSS/JAVASCRIPT.
 <br>
 Slike:
 <br>
-Predogled (Domača stran, tvetli način)
+Predogled (Domača stran, svetli način)
 <br>
 <img src="./slike-predogled/Svetli-nacin-uvodna-stran.png" alt="Domov">
 Predogled (Zavihek priljubljeni, temni način)
