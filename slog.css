@@ -1,0 +1,394 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin:0;
+    min-height:100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
+    transition: background-color 600ms;
+}
+
+/*Temni nacin*/
+.temni-nacin {
+    background: #181818;
+    color: white;
+    transition: background-color 600ms;
+}
+
+.temni-nacin .pr-krmilne:hover > button:hover {
+    background-color: transparent;
+    transform: scaleZ(170%) scale(95%);
+}
+
+.temni-nacin .pr-krmilne:active > button:active{
+    transform: scaleZ(170%) scale(90%);
+}
+
+.temni-nacin .izbira-nacin img{
+    transform: translateY(0) rotateZ(0deg);
+    transition: all 1s ease-out;
+    content: url("slike/temni-nacin/svetli-nacin2.png");
+}
+
+
+.temni-nacin .dejanje {
+    box-shadow: 0 10px 20px #1a1a1a;
+}
+
+
+.temni-nacin .vsecek:active,
+.temni-nacin .zavrni:active,
+.temni-nacin .ponovi-gumb:active,
+.temni-nacin .ponovi-gumb:active {
+    box-shadow: -7px 15px 5px 0 #353535;
+}
+
+.temni-nacin .izbira-nacin:hover {
+
+}
+
+/* =====================
+   Pisavnost
+   ===================== */
+
+h1 {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+p {
+    min-width: .8rem;
+}
+
+.nedostopno {
+    font-size: 1.9rem;
+}
+
+.priljubljene-osebe {
+    font-size: 1.6rem;
+}
+
+/* =================
+   Postavitev
+   ================= */
+.nosilec {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-inline: 3%;
+}
+
+.flex {
+    display: flex;
+}
+
+main {
+    margin-bottom: .5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    column-gap: 5em;
+}
+
+
+@media (max-width: 10em) {
+    main {
+        justify-content: stretch;
+        align-items: start;
+    }
+}
+/*Krmilna vrstica*/
+.vrstica-krm {
+    list-style: none;
+    justify-content: space-between;
+    align-items: start;
+    padding-inline: 0;
+    column-gap: .3em;
+}
+
+.izbira-nacin img{
+    transform: translateX(10%) rotateZ(50deg);
+    transition: all 1s ease-out;
+    cursor: pointer;
+}
+
+.pr-krmilne > button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    max-width: max-content;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.pr-krmilne  img {
+    max-width: clamp(3em, 5vw + 1px, 4.5em);
+}
+
+.poteze > img {
+    max-width: clamp(6em, 20vw + 1px, 9em);
+}
+
+@media (min-width: 20em) {
+    .pr-krmilne  img {
+        max-width: clamp(3.5em, 5vw + 1px, 4em);
+    }
+
+    .poteze > img {
+        max-width: clamp(6.5em, 20vw + 1px, 10em);
+    }
+}
+
+@media (min-width: 30em) {
+    .pr-krmilne  img {
+        max-width: clamp(4em, 7vw + 1px, 4.5em);
+    }
+
+    .poteze > img {
+        max-width: clamp(7em, 20vw + 1px, 10em);
+    }
+}
+
+.pr-krmilne:hover > button:hover {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.pr-krmilne:active > button:active{
+    transform: scaleZ(170%) scale(90%);
+}
+
+.izbira-nacin:active {
+    transform: scaleZ(1) scale(1);
+}
+
+/*Osebna kartica*/
+
+.prikaz-osebe {
+    margin-top: 1.5em;
+    max-width: clamp(20em, 30vw + 1px, 25em);
+}
+
+#objava {
+    max-width: 100%;
+}
+
+#objava .oseba {
+    max-width: 90%;
+}
+
+@media  (min-width: 50em) {
+    #objava .oseba {
+        min-width: 20em;
+    }
+}
+
+.oseba {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+    min-width: 8em;
+}
+
+.slika-osebe {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+
+
+@media (min-width: 30em) {
+    #objava .oseba {
+        max-width: 65%;
+    }
+    .oseba {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 45em) {
+    #objava .oseba {
+        max-width: 36%;
+    }
+    .oseba {
+        max-width: 100%;
+    }
+}
+
+.podatki-osebe {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    color: #F6F7FB;
+}
+
+.ime-osebe {
+    margin: 0;
+}
+
+.kljuc-osebe {
+    margin: 0;
+}
+
+.dejanja-osebe {
+    margin-top: 1em;
+    display: flex;
+    justify-content: start;
+    column-gap: 5vw;
+}
+
+.dejanje {
+    border: 1em solid #FFFFFF;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px #E9E9EA;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    place-items: center;
+    cursor: pointer;
+}
+
+.dejanje > img {
+    margin: 0;
+    padding: 0;
+    background-color: inherit;
+}
+
+.vsecek:hover,
+.vsecek:focus{
+    border-color: #DBFFF4;
+    background-color: #DBFFF4;
+}
+
+.zavrni:hover,
+.zavrni:focus{
+    border-color: #FFE7EF;
+    background-color: #FFE7EF;
+}
+
+.vsecek:active,
+.zavrni:active{
+    transform: scaleZ(170%) scale(90%);
+    box-shadow: -7px 15px 5px 0 #d0d0d0;
+}
+
+.zavrni-oznaceno {
+    border-color: #FFE7EF;
+    background-color: #FFE7EF;
+}
+
+.vsecek-oznaceno {
+    border-color: #DBFFF4;
+    background-color: #DBFFF4;
+}
+
+.izbrano {
+    max-width: 55%;
+    transform: rotate(335deg);
+    position: absolute;
+    left: 5%;
+    top: 8%;
+    animation: Vrtenjeslike 300ms;
+}
+
+@media (min-width: 11em) {
+    .dejanja-osebe {
+        justify-content: center;
+        column-gap: 2em;
+    }
+
+    .dejanje > img {
+        padding: .2em;
+    }
+}
+
+@media (min-width: 30em) {
+    .dejanje > img {
+        padding: .3em;
+    }
+}
+
+@media (min-width: 45em) {
+    .dejanje > img {
+        padding: clamp(.6em, 1vw + 1px, .6em);
+    }
+}
+
+
+
+
+/*Priljubljene osebe*/
+.priljubljene-osebe {
+    flex-basis: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*Nedostopno*/
+.nedostopno {
+    margin: 2em auto 1em;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.ponovi-gumb {
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    padding: .5em 2em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.ponovi-gumb:hover,
+.ponovi-gumb:focus{
+    border-color: #FFE7EF;
+    background-color: #FFE7EF;
+    transform: scaleZ(140%) scale(95%);
+}
+
+.ponovi-gumb:active,
+.ponovi-gumb:active{
+    transform: scaleZ(170%) scale(90%);
+    box-shadow: -7px 15px 5px 0 #d0d0d0;
+}
+
+@keyframes Vrtenjeslike {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.1);
+    }
+
+    30% {
+        transform: rotate(90deg) scale(0.3);
+    }
+
+    60% {
+        transform: rotate(180deg) scale(0.5);
+    }
+
+    90% {
+        transform: rotate(290deg) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(335deg) scale(1);
+    }
+}

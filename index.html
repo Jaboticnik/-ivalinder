@@ -1,0 +1,43 @@
+<!Doctype html>
+
+<html lang="sl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Živalinder</title>
+        <link rel="icon" href="slike/slike-zavihka.png" type="image/png">
+        <link href="slog.css" rel="stylesheet">
+        <script src="index.js" type="module" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body >
+    <header class="naslovnica-strani nosilec">
+        <nav class="krmilna-vrstica">
+            <ul class="vrstica-krm flex">
+                <li class="pr-krmilne"><button id="prikaz-najboljsih" class="racun">
+                    <img src="./slike/user.png" alt="Racun"/>
+                </button></li>
+                <li class="pr-krmilne"><button id="osnovno" class="poteze">
+                    <img src="./slike/logo.png" alt="Logo"/>
+                </button></li>
+                <li class="pr-krmilne"><button id="nacin" class="izbira-nacin">
+                    <img src="./slike/temni-nacin/temni-nacin2.png" alt="Nacin"/>
+                </button></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main >
+        <section id="objava" class="prikaz-osebe nosilec">
+            <div id='oseba' class="oseba"></div>
+            <div class="dejanja-osebe">
+                <button id="zavrni-gumb" class="dejanje zavrni"><img src="./slike/icon-cross.png" alt="Zavrni"/></button>
+                <button id="vsecek-gumb" class="dejanje vsecek"><img src="./slike/icon-heart.png" alt="Vsecek"/></button>
+            </div>
+        </section>
+    </main>
+    </body>
+</html>
